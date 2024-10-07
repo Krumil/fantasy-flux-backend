@@ -1,0 +1,61 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Poll Data",
+			"type": "debugpy",
+			"request": "launch",
+			"program": "${workspaceFolder}/manage.py",
+			"args": [
+				"poll_data"
+			],
+			"django": true,
+			"justMyCode": true
+		},
+		{
+			"name": "Predict Star Swings",
+			"type": "debugpy",
+			"request": "launch",
+			"program": "${workspaceFolder}/manage.py",
+			"args": [
+				"predict_star_swings"
+			],
+			"django": true,
+			"justMyCode": true
+		},
+		{
+			"name": "Poll Data and Predict Star Swings",
+			"type": "debugpy",
+			"request": "launch",
+			"program": "${workspaceFolder}/manage.py",
+			"args": [
+				"poll_data"
+			],
+			"postDebugTask": "Predict Star Swings",
+			"django": true,
+			"justMyCode": true
+		},
+		{
+			"name": "Run Server",
+			"type": "debugpy",
+			"request": "launch",
+			"program": "${workspaceFolder}/manage.py",
+			"args": [
+				"runserver"
+			],
+			"django": true,
+			"justMyCode": true
+		}
+	],
+	"tasks": [
+		{
+			"label": "Predict Star Swings",
+			"type": "process",
+			"command": "${workspaceFolder}/manage.py",
+			"args": [
+				"predict_star_swings"
+			],
+			"problemMatcher": []
+		}
+	]
+}
